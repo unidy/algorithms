@@ -1,4 +1,4 @@
-package algorithms.c06;
+package lession6;
 
 import static org.junit.Assert.*;
 

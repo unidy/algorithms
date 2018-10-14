@@ -1,4 +1,4 @@
-package algorithms.c06;
+package lession6;
 
 import java.util.*;
 
@@ -6,6 +6,11 @@ import algorithms.utils.Utils;
 
 public class MaxProductOfThree {
 
+	/**
+	 * Score: 100%
+	 * @param A
+	 * @return
+	 */
 	public int solution(int[] A) {
 		int result = 1;
 		int n = A.length;
@@ -19,7 +24,6 @@ public class MaxProductOfThree {
 		}
 
 		Arrays.sort(A);
-		Utils.print(A);
 		
 		result = A[n-1] * A[n-2] * A[n-3];
 		

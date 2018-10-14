@@ -1,9 +1,12 @@
-package algorithms.c06;
+package lession6;
 
 import java.util.Arrays;
 
 public class Triangle {
 
+	/**
+	 * Score: 100%
+	 */
 	public int solution(int[] A) {
 		
 		if (A == null || A.length < 3) {
