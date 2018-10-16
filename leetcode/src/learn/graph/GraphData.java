@@ -4,10 +4,10 @@ public class GraphData {
 	public static int V = 4;
 	public static int[][] adjEdge = {
             {0, 3, 1},
-            {1, 0, 1},
-            {1, 2, 1},
-            {2, 0, 1},
-            {2, 1, 1},
+            {1, 0, 2},
+            {1, 2, 4},
+            {2, 0, 5},
+            {2, 1, 4},
     };
 	
 	public static int[][] adjMatrix = new int[][] 

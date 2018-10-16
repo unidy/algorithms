@@ -12,7 +12,7 @@ public class MyDFSTest {
 	@Test
 	public void test() {
 		int[][] adjEdge = GraphData.adjEdge;
-		HashMap<Integer, LinkedList<Integer>> adjList = Graph.toAdjList(4, adjEdge);
+		HashMap<Integer, LinkedList<Integer[]>> adjList = MyGraph.toAdjList(4, adjEdge);
 		Utils.printAdjEdge(adjEdge);
 		Utils.printAdjList(adjList);
 		

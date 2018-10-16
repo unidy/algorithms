@@ -14,7 +14,7 @@ public class MyBFSTest {
 	@Ignore
 	public void test() {
 		int[][] adjEdge = GraphData.adjEdge;
-		HashMap<Integer, LinkedList<Integer>> adjList = Graph.toAdjList(4, adjEdge);
+		HashMap<Integer, LinkedList<Integer[]>> adjList = MyGraph.toAdjList(4, adjEdge);
 		Utils.printAdjEdge(adjEdge);
 		Utils.printAdjList(adjList);
 
@@ -28,10 +28,10 @@ public class MyBFSTest {
 	@Test
 	public void test2() {
 		Utils.printAdjMatrix(GraphData.adjMatrix);
-		int[][] adjEdge = Graph.toAdjEdge(GraphData.adjMatrix);
+		int[][] adjEdge = MyGraph.toAdjEdge(GraphData.adjMatrix);
 		Utils.printAdjEdge(adjEdge);
 		
-		HashMap<Integer, LinkedList<Integer>> adjList = Graph.toAdjList(GraphData.adjMatrix.length, adjEdge);
+		HashMap<Integer, LinkedList<Integer[]>> adjList = MyGraph.toAdjList(GraphData.adjMatrix.length, adjEdge);
 		Utils.printAdjList(adjList);
 
 		MyBFS.traverse(adjList, 0);

@@ -36,7 +36,7 @@ public class Utils {
 		}
 	}
 	
-	public static void printAdjList(HashMap<Integer, LinkedList<Integer>> adjList) {
+	public static void printAdjListWithoutWeight(HashMap<Integer, LinkedList<Integer>> adjList) {
 		System.out.println("adjList:");
 		
 		int V = adjList.size();
@@ -44,6 +44,24 @@ public class Utils {
 			System.out.print(i + ": ");
 			for (int j=0; j < adjList.get(i).size(); j++) {
 				System.out.print(adjList.get(i).get(j));
+				if (j < adjList.get(i).size() -1) {
+					System.out.print("->");
+				}
+			}
+			System.out.println("");
+		}
+	}
+
+	public static void printAdjList(HashMap<Integer, LinkedList<Integer[]>> adjList) {
+		System.out.println("adjList:");
+		
+		int V = adjList.size();
+		Integer[] edge;
+		for(int i=0; i < V; i++) {
+			System.out.print(i + ": ");
+			for (int j=0; j < adjList.get(i).size(); j++) {
+				edge = adjList.get(i).get(j);
+				System.out.print("{" + edge[0] + ", " + edge[1] + "}");
 				if (j < adjList.get(i).size() -1) {
 					System.out.print("->");
 				}

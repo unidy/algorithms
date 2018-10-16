@@ -5,7 +5,7 @@ import java.util.*;
 
 public class MyBFS {
 	
-	public static void traverse(HashMap<Integer, LinkedList<Integer>> adjList, int start) {
+	public static void traverse(HashMap<Integer, LinkedList<Integer[]>> adjList, int start) {
 		HashSet<Integer> visited = new HashSet<>();
 		
 		System.out.println("BFS traverse:");
@@ -13,7 +13,7 @@ public class MyBFS {
 		System.out.println("");
 	}
 	
-	private static void bfs(HashMap<Integer, LinkedList<Integer>> adjList, int start, HashSet<Integer> visited) {
+	private static void bfs(HashMap<Integer, LinkedList<Integer[]>> adjList, int start, HashSet<Integer> visited) {
 //		print(start);
 		
 		Queue<Integer> queue = new LinkedList<>();
@@ -25,10 +25,10 @@ public class MyBFS {
 			v = queue.poll();
 			print(v);
 			
-			for(Integer u: adjList.get(v)) {
+			for(Integer[] u: adjList.get(v)) {
 				if (!visited.contains(u)) {
-					queue.offer(u);
-					visited.add(u);
+					queue.offer(u[0]);
+					visited.add(u[0]);
 				}
 			}
 		}
@@ -37,5 +37,4 @@ public class MyBFS {
 	private static void print(int vertex) {
 		System.out.print("->" + vertex);
 	}
-
 }

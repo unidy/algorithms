@@ -4,7 +4,7 @@ import java.util.*;
 
 public class MyDFS {
 	
-	public static void traverse(HashMap<Integer, LinkedList<Integer>> adjList, int start) {
+	public static void traverse(HashMap<Integer, LinkedList<Integer[]>> adjList, int start) {
 		HashSet<Integer> visited = new HashSet<>();
 		
 		System.out.println("DFS traverse:");
@@ -12,12 +12,12 @@ public class MyDFS {
 		System.out.println("");
 	}
 	
-	private static void dfs(HashMap<Integer, LinkedList<Integer>> adjList, int start, HashSet<Integer> visited) {
+	private static void dfs(HashMap<Integer, LinkedList<Integer[]>> adjList, int start, HashSet<Integer> visited) {
 		print(start);
 		visited.add(start);
-		for(int v: adjList.get(start)) {
-			if(!visited.contains(v)) {
-				dfs(adjList, v, visited);
+		for(Integer[] v: adjList.get(start)) {
+			if(!visited.contains(v[0])) {
+				dfs(adjList, v[0], visited);
 			}
 		}
 	}
