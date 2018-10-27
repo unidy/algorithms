@@ -7,6 +7,8 @@ import java.util.Queue;
  * Scenarios of Islands: 1. single island with only one vertex 2. Island with
  * multiple verterics
  * 
+ * Runtime: 4 ms
+ * 
  * @author zhu
  *
  */

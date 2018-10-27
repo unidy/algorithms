@@ -28,11 +28,11 @@ public class Print {
 		println("]");
 	}
 	
-	private static void print(Object o) {
+	public static void print(Object o) {
 		System.out.print(o);
 	}
 	
-	private static void println(Object o) {
+	public static void println(Object o) {
 		System.out.println(o);
 	}
 }
