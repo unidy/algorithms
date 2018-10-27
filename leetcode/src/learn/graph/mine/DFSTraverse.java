@@ -17,8 +17,8 @@ public class DFSTraverse {
 		visited.add(start);
 		
 		for(Edge edge: adjList.get(start)) {
-			if (!visited.contains((Integer)edge.desc)) {
-				DFS(adjList, edge.desc, visited);
+			if (!visited.contains((Integer)edge.dest)) {
+				DFS(adjList, edge.dest, visited);
 			}
 		}
 	}

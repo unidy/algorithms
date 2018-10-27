@@ -24,7 +24,7 @@ public class MST {
 			
 			min = findMin(adjEdge, visited, unvisited);
 			edges.add(min);
-			v = min.desc;
+			v = min.dest;
 			unvisited.remove(v);
 			visited.add(v);
 		}
@@ -47,7 +47,7 @@ public class MST {
 		for(Integer i: visited) {
 //			list = (List<Edge>)edges.stream().filter(e -> e.src == i);
 			for(Edge edge: adjEdge) {
-				if (edge.src == i && unvisited.contains(edge.desc)) {
+				if (edge.src == i && unvisited.contains(edge.dest)) {
 					min = min == null || min.weight > edge.weight ? edge : min;
 				}
 			}

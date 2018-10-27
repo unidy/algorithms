@@ -17,8 +17,8 @@ public class BFSTraverse {
 			visited.add(v);
 			
 			for(Edge edge: adjList.get(v)) {
-				if (!visited.contains(edge.desc)) {
-					queue.offer(edge.desc);
+				if (!visited.contains(edge.dest)) {
+					queue.offer(edge.dest);
 				}
 			}
 		}

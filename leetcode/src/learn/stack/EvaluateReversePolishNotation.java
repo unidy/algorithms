@@ -23,6 +23,12 @@ public class EvaluateReversePolishNotation {
 		return stack.pop();
 	}
 
+	/*
+	 * Runtime: 5 ms
+	 * 
+	 * Use int[] instead of Stack
+	 * 
+	 */
 	public int evalRPN2(String[] tokens) {
 		int[] stack = new int[tokens.length];
 

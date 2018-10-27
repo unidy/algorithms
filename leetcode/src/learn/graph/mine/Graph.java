@@ -98,9 +98,9 @@ public class Graph {
 		Edge edge;
 		for(int i=0; i < this.edges.size(); i++) {
 			edge = this.edges.get(i);
-			matrix[edge.src][edge.desc] = edge.weight;
+			matrix[edge.src][edge.dest] = edge.weight;
 			if (directed) {
-				matrix[edge.desc][edge.src] = edge.weight;
+				matrix[edge.dest][edge.src] = edge.weight;
 			}
 		}
 		
