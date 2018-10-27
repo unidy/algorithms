@@ -77,19 +77,22 @@ public class Graph {
 		return adjMatrix;
 	}
 	
-	public static HashMap<Integer, LinkedList<Integer>> toAdjList(int V, int[][] adjEdge) {
+	public static HashMap<Integer, LinkedList<Integer[]>> toAdjList(int V, int[][] adjEdge) {
 		if (V == 0 || adjEdge == null) {
 			return null;
 		}
 		
-		HashMap<Integer, LinkedList<Integer>> adjList = new HashMap<>();
+		HashMap<Integer, LinkedList<Integer[]>> adjList = new HashMap<>();
 		
 		for (int i=0; i < V; i++) {
 			adjList.put(i, new LinkedList<>());
 		}
 		
+		Integer[] edge = new Integer[2];
 		for (int i=0; i < adjEdge.length; i++) {
-			adjList.get(adjEdge[i][0]).add(adjEdge[i][1]);
+			edge[0] = adjEdge[i][0];
+			edge[1] = adjEdge[i].length > 1 ? adjEdge[i][1] : 1;
+			adjList.get(adjEdge[i][0]).add(edge);
 		}
 		
 		return adjList;

@@ -11,7 +11,7 @@ import learn.graph.Utils;
 public class GraphTest {
 
 	@Test
-	@Ignore
+//	@Ignore
 	public void testAdjEdge() {
 		Utils.printAdjEdge(GraphData.adjEdge);
 		
@@ -31,7 +31,7 @@ public class GraphTest {
 	}
 	
 	@Test
-	@Ignore
+//	@Ignore
 	public void testAdjMatrix() {
 		Utils.printAdjMatrix(GraphData.adjMatrix);
 		
@@ -41,7 +41,7 @@ public class GraphTest {
 	}
 	
 	@Test
-	@Ignore
+//	@Ignore
 	public void testAdjList() {
 		Utils.printAdjMatrix(GraphData.adjMatrix);
 		Graph graph = new Graph(GraphData.adjMatrix);

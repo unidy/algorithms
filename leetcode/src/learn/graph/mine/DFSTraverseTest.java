@@ -1,7 +1,5 @@
 package learn.graph.mine;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 import learn.graph.GraphData;
@@ -14,8 +12,13 @@ public class DFSTraverseTest {
 	@Test
 	public void test() {
 		Utils.printAdjEdge(GraphData.adjEdge);
-
+		
 		Graph graph = new Graph(GraphData.V, GraphData.adjEdge);
+
+		GraphUtils.printAdjEdge(graph.toAdjEdge());
+		Utils.printAdjEdge(GraphData.adjEdge);
+
+//		Graph graph = new Graph(GraphData.V, GraphData.adjEdge);
 
 		GraphUtils.printAdjList(graph.toAdjList());
 
